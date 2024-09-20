@@ -1,5 +1,6 @@
 import { Sanchez, Miniver, Poppins, Nunito, Roboto } from 'next/font/google';
 import './globals.css';
+import Footer from '@/components/Footer';
 
 // Import the fonts and configure them
 const sanchez = Sanchez({
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
         className={`${sanchez.variable} ${miniver.variable} ${poppins.variable} ${nunito.variable} ${roboto.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

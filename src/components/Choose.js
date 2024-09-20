@@ -3,7 +3,7 @@ import React from "react";
 
 export default function Choose() {
   return (
-    <div className="md:w-9/12 mx-auto md:flex items-center gap-10 md:gap-20 my-20">
+    <div className="md:w-10/12 mx-auto md:flex items-center gap-10 md:gap-20 my-20">
       {/* image section */}
       <div className="md:w-[40%] w-11/12 mx-auto text-headerdarktect space-y-5">
         <Image

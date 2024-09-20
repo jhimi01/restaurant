@@ -21,3 +21,23 @@
       @apply max-w-[1300px] lg:mx-auto p-2 md:px-10 xl:px-0 w-full;
     }
 }
+
+
+.slick-dots{
+/* position: absolute !important; */
+right: -200px !important;
+bottom: 40px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+  background: #A52A2A;
+}
+
+.slick-dots li button:before {
+  content: ' ' !important;
+  border: 2px solid #A52A2A !important;
+  border-radius: 50% !important;
+  color: transparent !important;
+  opacity: .85 !important;
+}

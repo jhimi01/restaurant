@@ -2,6 +2,9 @@ import { Sanchez, Miniver, Poppins, Nunito, Roboto } from 'next/font/google';
 import './globals.css';
 import Footer from '@/components/Footer';
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 // Import the fonts and configure them
 const sanchez = Sanchez({
   weight: ['400'], // You can add more weights if needed

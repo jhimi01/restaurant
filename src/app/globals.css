@@ -18,6 +18,6 @@
 
 @layer utilities {
     .wrapper {
-      @apply max-w-[1500px] lg:mx-auto p-2 md:px-10 xl:px-0 w-full;
+      @apply max-w-[1300px] lg:mx-auto p-2 md:px-10 xl:px-0 w-full;
     }
 }

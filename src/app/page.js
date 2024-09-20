@@ -1,5 +1,6 @@
 import Aboutus from "@/components/Aboutus";
 import Choose from "@/components/Choose";
+import Dishes from "@/components/Dishes";
 import Hero from "@/components/Hero";
 
 
@@ -9,6 +10,7 @@ export default function Home() {
     <Hero />
     <Aboutus />
     <Choose />
+    <Dishes />
    </main>
   );
 }

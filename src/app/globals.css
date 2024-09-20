@@ -3,6 +3,18 @@
 @tailwind utilities;
 
 
+:root {
+    --font-sanchez: 'Sanchez', serif;
+    --font-miniver: 'Miniver', cursive;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-nunito: 'Nunito', sans-serif;
+    --font-roboto: 'Roboto', sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-poppins); /* Set a default font if needed */
+  }
+
 
 @layer utilities {
     .wrapper {

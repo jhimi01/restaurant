@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="h-[1079px] -z-2 left-[-156.98px] top-[-360px] w-[1079px] rounded-full bg-[#ffffff31] absolute"></div>
       <div className="flex wrapper items-center justify-center mt-14">
         <div className="w-1/2 mx-auto">
-          <h1 className="text-[96px] text-white">BREAKFAST</h1>
+          <h1 className="font-sanchez text-[96px] text-white">BREAKFAST</h1>
           <p className="text-[20px] text-white">
             Breakfast, often referred to as the ‘most important meal of the
             day’, provides essential nutrients to kick start our day. It

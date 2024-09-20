@@ -15,6 +15,12 @@ module.exports = {
         blacktext: "#0000"
        
       },
+      fontFamily: {
+        sanchez: 'var(--font-sanchez)',
+        miniver: 'var(--font-miniver)',
+        poppins: 'var(--font-poppins)',
+        nunito: 'var(--font-nunito)',
+      },
     },
   },
   plugins: [],

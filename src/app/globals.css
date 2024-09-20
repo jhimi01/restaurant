@@ -41,3 +41,13 @@ bottom: 40px !important;
   color: transparent !important;
   opacity: .85 !important;
 }
+
+.slick-prev {
+  left: 298px !important;
+}
+.slick-next{
+  right: 10px !important;
+}
+.slick-prev, .slick-next{
+  top: 80% !important;
+}

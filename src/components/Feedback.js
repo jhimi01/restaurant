@@ -3,6 +3,30 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 export default function Feedback() {
+
+
+    function SampleNextArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", background: "#F5878752" }}
+            onClick={onClick}
+          />
+        );
+      }
+      
+      function SamplePrevArrow(props) {
+        const { className, style, onClick } = props;
+        return (
+          <div
+            className={className}
+            style={{ ...style, display: "block", background: "#F5878752" }}
+            onClick={onClick}
+          />
+        );
+      }
+      
   const settings = {
     dots: true,
     infinite: true,
@@ -10,6 +34,17 @@ export default function Feedback() {
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    responsive: [
+        {
+            breakpoint: 1024, // For tablets and small desktops
+            settings: {
+                dots: false,
+                nextArrow: <SampleNextArrow />,
+                prevArrow: <SamplePrevArrow />
+            },
+            
+          },
+        ],
   };
 
   const feedbacks = [
@@ -34,11 +69,11 @@ export default function Feedback() {
   ];
 
   return (
-    <div className="wrapper my-24">
-      <div className="flex justify-between">
+    <div className="wrapper mt-24">
+      <div className="md:flex justify-between">
         {/* slider section */}
-        <div className="w-1/2">
-          <h1 className="text-[50px] text-[#000000] font-bold">
+        <div className="md:w-1/2 w-11/12 mx-auto">
+          <h1 className="text-[30px] md:text-[50px] text-center md:text-start  text-[#000000] font-bold">
             Customer <span className="text-primary">Feedback</span>
           </h1>
           {/* SLIDER WILL BE HERE */}
@@ -46,8 +81,8 @@ export default function Feedback() {
           <div className="slider-container">
             <Slider {...settings}>
               {feedbacks.map((feedback, index) => (
-                <div key={index} className="p-5 relative">
-                  <p className="text-[#3d3d3d] text-[20px]">
+                <div key={index} className="md:p-5 relative">
+                  <p className="text-[#3d3d3d] text-[14px] md:text-[20px]">
                     {feedback.feedback}
                   </p>
 

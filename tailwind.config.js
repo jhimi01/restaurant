@@ -11,7 +11,8 @@ module.exports = {
         primary: "#880808",
         secondary: "#A52A2A",
         headerdarktect: "#231900",
-        subtext: "#2D2D2D"
+        subtext: "#2D2D2D",
+        blacktext: "#0000"
        
       },
     },

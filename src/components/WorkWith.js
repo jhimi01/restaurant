@@ -54,7 +54,7 @@ export default function WorkWith() {
   ];
 
   return (
-    <div className="wrapper my-20">
+    <div className="wrapper my-20 overflow-x-hidden">
       {/* Header Section */}
       <div className="text-center mb-8">
         <h5 className="text-secondary text-[18px] font-miniver">

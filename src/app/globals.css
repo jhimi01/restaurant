@@ -2,52 +2,72 @@
 @tailwind components;
 @tailwind utilities;
 
-
 :root {
-    --font-sanchez: 'Sanchez', serif;
-    --font-miniver: 'Miniver', cursive;
-    --font-poppins: 'Poppins', sans-serif;
-    --font-nunito: 'Nunito', sans-serif;
-    --font-roboto: 'Roboto', sans-serif;
-  }
-  
-  body {
-    font-family: var(--font-poppins); /* Set a default font if needed */
-  }
-
-
-@layer utilities {
-    .wrapper {
-      @apply max-w-[1300px] lg:mx-auto p-2 md:px-10 xl:px-0 w-full;
-    }
+  --font-sanchez: "Sanchez", serif;
+  --font-miniver: "Miniver", cursive;
+  --font-poppins: "Poppins", sans-serif;
+  --font-nunito: "Nunito", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
 }
 
+body {
+  font-family: var(--font-poppins); /* Set a default font if needed */
+}
 
-.slick-dots{
-/* position: absolute !important; */
-right: -200px !important;
-bottom: 40px !important;
+@layer utilities {
+  .wrapper {
+    @apply max-w-[1300px] lg:mx-auto p-2 md:px-10 xl:px-0 w-full;
+  }
+}
+
+.slick-dots {
+  /* position: absolute !important; */
+  right: -200px !important;
+  bottom: 40px !important;
 }
 
 .slick-dots li.slick-active button:before {
   opacity: 1 !important;
-  background: #A52A2A;
+  background: #a52a2a;
 }
 
 .slick-dots li button:before {
-  content: ' ' !important;
-  border: 2px solid #A52A2A !important;
+  content: " " !important;
+  border: 2px solid #a52a2a !important;
   border-radius: 50% !important;
   color: transparent !important;
-  opacity: .85 !important;
+  opacity: 0.85 !important;
 }
 
 .slick-prev {
   left: 298px !important;
 }
-.slick-next{
-  /* right: 10px !important; */
-}
-.slick-prev, .slick-next{
+.slick-prev,
+.slick-next {
   top: 80% !important;
+}
+
+@keyframes move-circle {
+  0% {
+    transform: translateX(10px, -10px) translateY(10px);
+    opacity: 1;
+  }
+  25% {
+    transform: translateX(-500px) translateY(1000px); /* Move left and down */
+    opacity: 0.5; /* Optional fading effect */
+  }
+
+  50% {
+    transform: translateX(-500px) translateY(1000px); /* Move left and down */
+    opacity: 0.5; /* Optional fading effect */
+  }
+
+  100% {
+    transform: translateX(0) translateY(0); /* Return to original position */
+    opacity: 1;
+  }
+}
+
+.animate-move-circle {
+  animation: move-circle 1s ease-in-out;
 }

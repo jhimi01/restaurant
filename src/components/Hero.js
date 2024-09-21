@@ -14,19 +14,21 @@ export default function Hero() {
   // Set the default image and background color
   const [selectedImage, setSelectedImage] = useState(images[0].src);
   const [bgColor, setBgColor] = useState(images[0].bgColor);
+  const [selectedIndex, setSelectedIndex] = useState(0); // Track the selected image index
 
   // Handle the click event to change the image and background color
-  const handleImageClick = (image) => {
+  const handleImageClick = (image, index) => {
     setSelectedImage(image.src);
     setBgColor(image.bgColor);
+    setSelectedIndex(index); // Update the selected image index
   };
 
   return (
     <div
-      className={`overflow-hidden rounded-b-3xl pb-20 pt-20 relative ${bgColor}`}
+      className={`overflow-hidden rounded-b-3xl pb-20 pt-10 relative ${bgColor}`}
     >
-      <div className="md:h-[1079px] h-[500px] w-[500px] -z-2 md:left-[-156.98px] md:top-[-360px] -top-10 -right-52md:w-[1079px] rounded-full bg-[#ffffff31] absolute"></div>
-      <div className="flex wrapper items-center justify-center mt-14">
+      <div className="md:h-[800px] w-[500px] -z-2 md:left-[-156.98px] md:top-[-300px] -top-10 -right-52 md:w-[800px] rounded-full bg-[#ffffff31] absolute"></div>
+      <div className="flex wrapper items-center justify-between mt-14">
         <div className="w-1/2 mx-auto">
           <h1 className="font-sanchez text-[96px] text-white">BREAKFAST</h1>
           <p className="text-[20px] text-white">
@@ -37,17 +39,23 @@ export default function Hero() {
             breakfast can improve concentration and performance, boost physical
             endurance, and lower cholesterol levels.
           </p>
-          <div className="flex items-center relative space-x-4">
+          <div className="flex items-center  mt-10  relative space-x-1">
             {images.map((image, index) => (
-              <Image
+              <div
+                onClick={() => handleImageClick(image, index)} // Pass both image and index here
                 key={index}
-                alt="items"
-                width="300"
-                height="300"
-                src={image.src}
-                className="cursor-pointer"
-                onClick={() => handleImageClick(image)} // Change image and bg color on click
-              />
+                className="cursor-pointer h-[20] w-[20]"
+              >
+                <Image
+                  alt="items"
+                  width="300"
+                  height="300"
+                  src={image.src}
+                  className={`cursor-pointer h-auto w-auto pb-10 ${
+                    selectedIndex === index ? "border-b-4 border-white" : ""
+                  }`}
+                />
+              </div>
             ))}
           </div>
           <div className="relative mt-20">
@@ -59,13 +67,15 @@ export default function Hero() {
             <IoSearch className="absolute top-4 left-5 text-2xl" />
           </div>
         </div>
-        <div className="w-1/2 relative z-10 left-0 mx-auto">
+        <div className="w-[100%] relative z-10 h-[40] left-[50px]">
           {/* Large image that updates dynamically */}
           <Image
             alt="selected item"
-            width="700"
-            height="700"
+            width={500}
+            height={500}
             src={selectedImage}
+            quality={100}
+            className="m-auto"
           />
         </div>
       </div>

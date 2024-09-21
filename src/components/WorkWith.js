@@ -76,7 +76,7 @@ export default function WorkWith() {
                   alt="brands"
                   width="500"
                   height="500"
-                  className="h-full w-full object-center"
+                  className="h-auto w-auto object-center"
                 />
               </div>
             </div>

@@ -28,7 +28,7 @@ export default function TeamMember() {
   return (
     <div>
       <div
-        className="w-full h-72 md:h-full md:pb-60 -mt-3 text-white text-center"
+        className="w-full h-72 md:h-full md:pb-60 -mt-2 text-white text-center"
         style={{ backgroundImage: "url(/image/Bg.png)", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}
       >
         <div className="w-1/2 mx-auto hidden md:block">

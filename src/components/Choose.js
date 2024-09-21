@@ -5,7 +5,7 @@ export default function Choose() {
   return (
     <div className="md:w-10/12 mx-auto md:flex items-center gap-10 md:gap-20 my-20">
       {/* image section */}
-      <div className="md:w-[40%] w-11/12 mx-auto text-headerdarktect space-y-5">
+      <div data-aos="fade-right" data-aos-duration="500" data-aos-easing="linear" className="md:w-[40%] w-11/12 mx-auto text-headerdarktect space-y-5">
         <Image
           src="/image/home/image28.png"
           alt="why people choose"
@@ -16,7 +16,7 @@ export default function Choose() {
       </div>
 
       {/* contents */}
-      <div className="md:w-[60%] w-11/12 mt-10 md:mt-0=font-nunito mx-auto text-headerdarktect space-y-5">
+      <div data-aos="fade-left" data-aos-duration="500" data-aos-easing="linear" className="md:w-[60%] w-11/12 mt-10 md:mt-0=font-nunito mx-auto text-headerdarktect space-y-5">
         <h1 className="md:text-[50px] text-[30px] text-subtext font-bold">
           Why People Choose us?
         </h1>

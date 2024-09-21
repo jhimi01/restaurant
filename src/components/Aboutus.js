@@ -5,11 +5,13 @@ import { CiPlay1 } from "react-icons/ci";
 export default function Aboutus() {
   return (
     <div className="md:w-10/12 mx-auto flex md:flex-row flex-col-reverse gap-10 my-20">
-      <div className="md:w-1/2 w-11/12 mx-auto text-headerdarktect space-y-5">
+      <div data-aos="fade-right" data-aos-duration="500" data-aos-easing="linear" className="md:w-1/2 w-11/12 mx-auto text-headerdarktect space-y-5">
         <h5 className="text-[18px] capitalize text-primary font-semibold">
           PIZZA DELIVERY
         </h5>
-        <h1 className="text-[30px] font-poppins md:text-[55px] font-semibold">Get Started Today!</h1>
+        <h1 className="text-[30px] font-poppins md:text-[55px] font-semibold">
+          Get Started Today!
+        </h1>
         <div className="h-1 w-60 bg-primary"></div>
 
         <h3 className="md:text-[26px] font-poppins text-[16px] font-semibold">
@@ -30,7 +32,9 @@ export default function Aboutus() {
               height="60"
               alt="icon"
             />
-            <h4 className="font-semibold text-[10px] md:text-[20px]">Food Order</h4>
+            <h4 className="font-semibold text-[10px] md:text-[20px]">
+              Food Order
+            </h4>
             <p className=" text-[8px] md:text-[15px]">
               Food is the necessity of life. It provides nutrition, sustenance
               growth to human body.
@@ -43,7 +47,9 @@ export default function Aboutus() {
               height="60"
               alt="icon"
             />
-            <h4 className="font-semibold text-[10px] md:text-[20px]">Food Order</h4>
+            <h4 className="font-semibold text-[10px] md:text-[20px]">
+              Food Order
+            </h4>
             <p className=" text-[8px] md:text-[15px]">
               Food is the necessity of life. It provides nutrition, sustenance
               growth to human body.
@@ -52,7 +58,7 @@ export default function Aboutus() {
         </div>
       </div>
 
-      <div className="md:w-1/2 w-11/12 mx-auto md:space-y-5">
+      <div data-aos="fade-left" data-aos-duration="500" data-aos-easing="linear" className="md:w-1/2 w-11/12 mx-auto md:space-y-5">
         <div className="flex items-center">
           <h5 className="text-primary font-miniver text-[18px]">About us</h5>
           <span className="h-[1px] ml-2 mt-1 w-5 bg-primary"></span>

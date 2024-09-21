@@ -3,30 +3,28 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 export default function Feedback() {
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "#F5878752" }}
+        onClick={onClick}
+      />
+    );
+  }
 
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "#F5878752" }}
+        onClick={onClick}
+      />
+    );
+  }
 
-    function SampleNextArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, display: "block", background: "#F5878752" }}
-            onClick={onClick}
-          />
-        );
-      }
-      
-      function SamplePrevArrow(props) {
-        const { className, style, onClick } = props;
-        return (
-          <div
-            className={className}
-            style={{ ...style, display: "block", background: "#F5878752" }}
-            onClick={onClick}
-          />
-        );
-      }
-      
   const settings = {
     dots: true,
     infinite: true,
@@ -35,16 +33,15 @@ export default function Feedback() {
     slidesToScroll: 1,
     fade: true,
     responsive: [
-        {
-            breakpoint: 1024, // For tablets and small desktops
-            settings: {
-                dots: false,
-                nextArrow: <SampleNextArrow />,
-                prevArrow: <SamplePrevArrow />
-            },
-            
-          },
-        ],
+      {
+        breakpoint: 1024, // For tablets and small desktops
+        settings: {
+          dots: false,
+          nextArrow: <SampleNextArrow />,
+          prevArrow: <SamplePrevArrow />,
+        },
+      },
+    ],
   };
 
   const feedbacks = [
@@ -78,10 +75,15 @@ export default function Feedback() {
           </h1>
           {/* SLIDER WILL BE HERE */}
 
-          <div className="slider-container">
+          <div
+            data-aos="fade-right"
+            // data-aos-offset="300"
+           data-aos-duration="500" data-aos-easing="linear"
+            className="slider-container"
+          >
             <Slider {...settings}>
               {feedbacks.map((feedback, index) => (
-                <div key={index} className="md:p-5 relative">
+                <div key={index} className="relative">
                   <p className="text-[#3d3d3d] text-[14px] md:text-[20px]">
                     {feedback.feedback}
                   </p>
@@ -112,7 +114,10 @@ export default function Feedback() {
         </div>
 
         {/* img section */}
-        <div>
+        <div
+          data-aos="fade-up"
+        data-aos-duration="500" data-aos-easing="linear"
+        >
           <Image
             src="/image/feedback.png"
             alt="feedback thumb"

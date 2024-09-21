@@ -46,7 +46,7 @@ bottom: 40px !important;
   left: 298px !important;
 }
 .slick-next{
-  right: 10px !important;
+  /* right: 10px !important; */
 }
 .slick-prev, .slick-next{
   top: 80% !important;

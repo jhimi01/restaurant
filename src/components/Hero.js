@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { IoSearch } from "react-icons/io5";
+import Navbar from "./Navbar";
 
 export default function Hero() {
   // Define the available images and background colors
@@ -32,8 +33,12 @@ export default function Hero() {
     <div
       className={`overflow-hidden rounded-b-3xl pb-20 md:pt-10 relative transition-colors duration-500 ${bgColor}`} // Smooth transition for background color
     >
+      
       <div className="md:h-[800px] hidden md:block w-[500px] -z-2 md:left-[-156.98px] md:top-[-300px] -top-10 -right-52 md:w-[800px] rounded-full bg-[#ffffff31] absolute"></div>
-      <div className="md:flex wrapper items-center justify-between mt-14">
+      <div className="wrapper">
+      <Navbar />
+      <div className="md:flex  items-center justify-between mt-14">
+        
         <div className="md:w-1/2 md:text-start w-11/12 mx-auto ">
           <h1 className="font-sanchez text-[45px] md:text-[96px] text-white">
             BREAKFAST
@@ -101,6 +106,8 @@ export default function Hero() {
           />
         </div>
       </div>
+      </div>
+     
 
       <div className="h-[500px] hidden md:block md:h-[1000px] right-[-200px] md:right-[-350px] bottom-[-100px] md:bottom-[-500px] w-[500px] md:w-[1000px] rounded-full bg-[#ffffff31] -z-3 absolute"></div>
     </div>

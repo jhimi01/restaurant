@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${sanchez.variable} ${miniver.variable} ${poppins.variable} ${nunito.variable} ${roboto.variable} antialiased`}
       >
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
         <Footer />
       </body>

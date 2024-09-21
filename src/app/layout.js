@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Navbar from '@/components/Navbar';
 
 
 // Import the fonts and configure them
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${sanchez.variable} ${miniver.variable} ${poppins.variable} ${nunito.variable} ${roboto.variable} antialiased`}
       >
+        <Navbar />
         {children}
         <Footer />
       </body>

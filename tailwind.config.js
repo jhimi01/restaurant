@@ -12,7 +12,10 @@ module.exports = {
         secondary: "#A52A2A",
         headerdarktect: "#231900",
         subtext: "#2D2D2D",
-        blacktext: "#0000"
+        blacktext: "#0000",
+        blue: "#0A4669",
+        pink: "#953553",
+        green: "#006666"
        
       },
       fontFamily: {
